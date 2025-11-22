@@ -10,9 +10,9 @@ O algoritmo explora todas as possíveis sequências de células adjacentes que c
 
 ### Estratégia de Busca
 
-A busca é implementada como uma **Busca em Profundidade (DFS | sigla em inglês para Depth-First Search). É um algoritmo para percorrer ou buscar nós em uma estrutura de dados de árvore ou grafo.
+A busca é implementada como uma Busca em Profundidade **(DFS | sigla em inglês para Depth-First Search)**. É um algoritmo para percorrer ou buscar nós em uma estrutura de dados de árvore ou grafo.
 
-A principal característica do DFS é que ele explora o máximo possível ao longo de cada ramo antes de retroceder (backtrack). Ou seja, ele vai "fundo" em um caminho antes de explorar caminhos adjacentes.** recursiva, iniciada a partir de cada célula da matriz que corresponde ao primeiro caractere da palavra.
+A principal característica do DFS é que ele explora o máximo possível ao longo de cada ramo antes de retroceder (backtrack). Ou seja, ele vai "fundo" em um caminho antes de explorar caminhos adjacentes. recursiva, iniciada a partir de cada célula da matriz que corresponde ao primeiro caractere da palavra.
 
 1.  **Exploração:** A função `busca_backtracking` é chamada recursivamente para a próxima letra da palavra em todas as **8 direções adjacentes** (horizontal, vertical e diagonal).
 2.  **Marcação:** Antes de fazer uma chamada recursiva, a célula atual é temporariamente marcada com `#` (caractere `char_original` é armazenado) para indicar que já foi visitada nesse caminho de busca.
@@ -32,14 +32,14 @@ A complexidade é analisada em relação às dimensões da matriz ($M \times N$)
 
 ### Função de Busca
 
-T(M, N, L) = M \cdot N \cdot O(8^L)
+$$T(M, N, L) = M \cdot N \cdot O(8^L)$$
 
-* **Complexidade de Tempo (Pior Caso):** O(M \cdot N \cdot 8^L)
-    * O fator M \cdot N vem de iniciar a DFS em cada célula da matriz.
-    * O fator 8^L reflete o número de possíveis caminhos de comprimento L, pois, no pior caso, há até 8 ramificações em cada passo da recursão.
-* **Complexidade de Espaço (Pior Caso):** O(L + M \cdot N)
-    * O(L) para a profundidade da pilha de chamadas recursivas (que é limitada pelo comprimento da palavra).
-    * O(M \cdot N) para a cópia da matriz usada para preservar o estado em cada nova busca.
+* **Complexidade de Tempo (Pior Caso):** $O(M \cdot N \cdot 8^L)$
+    * O fator $M \cdot N$ vem de iniciar a DFS em cada célula da matriz.
+    * O fator $8^L$ reflete o número de possíveis caminhos de comprimento L, pois, no pior caso, pode haver até 8 ramificações em cada passo da recursão.
+* **Complexidade de Espaço (Pior Caso):** $O(L + M \cdot N)$
+    * $O(L)$ para a profundidade da pilha de chamadas recursivas (que é limitada pelo comprimento da palavra).
+    * $O(M \cdot N)$ para a cópia da matriz usada para preservar o estado em cada nova busca.
 
 *Onde M e N são as dimensões da matriz, e L é o comprimento da palavra a ser encontrada.*
 
