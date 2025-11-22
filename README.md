@@ -1,0 +1,1 @@
+# aed2-trabalho2-gp4-2025.2
