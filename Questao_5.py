@@ -71,13 +71,13 @@ def palavras_matriz(matriz: List[List[str]], palavras: List[str]) -> Dict[str, T
 
 #Main
 matriz_exemplo = [
-    ['C', 'A', 'N', 'D', 'O'],
-    ['E', 'G', 'U', 'N', 'A'],
-    ['L', 'A', 'M', 'O', 'S'],
-    ['P', 'O', 'I', 'R', 'T']
+    ['C', 'T', 'E', 'D', 'O'],
+    ['E', 'A', 'R', 'N', 'A'],
+    ['P', 'A', 'M', 'O', 'S'],
+    ['O', 'I', 'S', 'R', 'T']
 ]
 
-palavras_para_buscar = ["CANTO", "LAGO", "DIREITA", "SIM", "AMOR", "CASA",]
+palavras_para_buscar = ["CANTO", "LAGO", "TERAPIA", "SIM", "AMOR", "CASA",]
 
 print("========== Programa Word Search ==========")
 print(f"Matriz de exemplo: {matriz_exemplo}")
